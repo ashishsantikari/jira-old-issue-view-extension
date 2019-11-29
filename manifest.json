@@ -1,0 +1,16 @@
+{
+    "name": "Jira Cloud Old Issue View",
+    "version": "1.0",
+    "description": "Loads the old issue view instead of the new view",
+    "permissions": [
+        "declarativeContent"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://*.atlassian.net/browse/*"],
+            "js": ["changeURL.js"],
+            "exclude_matches": ["*://*/*?oldIssueView=true"]
+        }
+    ],
+    "manifest_version": 2
+  }
